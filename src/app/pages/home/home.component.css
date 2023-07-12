@@ -1,0 +1,10 @@
+
+
+.btn-text {
+  color: var(--second-color) !important;
+}
+
+.btn-head:hover {
+  opacity: .8;
+  transition: .3;
+}

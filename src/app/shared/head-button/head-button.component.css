@@ -1,0 +1,28 @@
+button {
+  position: relative;
+  z-index: 1;
+}
+
+button::before {
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: '';
+  width: 4%;
+  height: 100%;
+  background-color: var(--red-color);
+  border-radius: 0.75rem;
+  z-index: -1;
+  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+
+button:hover::before{
+  width: 100%;
+
+
+
+}
+
+

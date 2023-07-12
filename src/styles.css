@@ -4,12 +4,36 @@
   --second-color:#ffffff;
   --red-color:#E23237;
 }
-html, body { height: 100%;background-color: var(--main-color);}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;scroll-behavior:'smooth'; }
+html, body { height: 100%; scroll-behavior: smooth; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue",
+  sans-serif;scroll-behavior:'smooth';box-sizing: border-box;
+  background-color: var(--main-color);
+
+
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+::-webkit-scrollbar {
+  width: 0.825rem;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 0.188rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+
+}
 

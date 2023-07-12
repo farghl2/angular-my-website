@@ -1,4 +1,4 @@
-<div class=" bg-[--main-color] w-full p-10 mx-auto text-center">
+<div class=" bg-[--main-color] w-full md:p-10 py-7 mx-auto text-center">
   <app-head-button>Edu and Skills</app-head-button>
   <div class="flex sm:justify-evenly sm:flex-row sm:items-start flex-col items-center justify-center py-5">
     <div class="text-center mb-5">
@@ -34,8 +34,11 @@
 
 
     <div class="text-center sm:ml-8 md:text-[2.5rem] text-[2rem] text-[--second-color] sm:text-left leading-[3rem]">
-      Beni-Suef University,<br>
-      Faculty of Navigation science and space technology,<br>
+      Beni-Suef University,
+      <a href="https://www.bsu.edu.eg/" target="_blank"><mat-icon>open_in_new</mat-icon></a>
+      <br>
+      Faculty of Navigation science and space technology,
+      <br>
       <span class="text-[--red-color] text-[2rem]"> level Three </span>
 
 
@@ -65,27 +68,22 @@
     </div>
 
 <div class="flex lg:flex-row flex-col ">
-    <div class="text-center sm:ml-8 md:text-[2.5rem] text-[2rem] text-[--second-color] sm:text-left leading-[3rem]">
-      <ul class="list-none">
-        <li>c/c++</li>
-        <li>Data Structures</li>
-        <li>Algorithms</li>
-        <li>Etrepreneurship</li>
-
+    <div class="text-center sm:ml-8 md:text-[2.5rem] text-[2rem]
+    text-[--second-color] sm:text-left leading-[3rem]">
+    <p class="text-[1.5rem] border-b border-t sm:border-t-0">Core Courses </p>
+      <ul class="list-none mb-8 sm:mb-0">
+        <li *ngFor="let skill of coreCourses"
+        >{{skill}}</li>
       </ul>
     </div>
-    <div class="text-center sm:ml-8 md:text-[2.5rem] text-[2rem] text-[--second-color] sm:text-left leading-[3rem]">
+    <div class="text-center sm:ml-8 md:text-[2.5rem] text-[2rem]
+    text-[--second-color] sm:text-left leading-[3rem]">
+    <p class="text-[1.5rem] border-b border-t sm:border-t-0">Advanced Courses </p>
       <ul class="list-none">
-       <li>Angular</li>
+       <li
+       *ngFor="let skill of advancedCourses"
+       >{{skill}}</li>
 
-       <li>Java Script</li>
-       <li>TypeScript</li>
-       <li>RxJs</li>
-       <li>BootStrap</li>
-       <li>Tailwind</li>
-       <li>HTML</li>
-       <li>CSS</li>
-       <li>SASS</li>
 
       </ul>
     </div>

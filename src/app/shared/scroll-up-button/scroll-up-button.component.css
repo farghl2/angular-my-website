@@ -1,0 +1,9 @@
+.scroll-up-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--red-color);
+  color: var(--second-color);
+  z-index: 20;
+}
+

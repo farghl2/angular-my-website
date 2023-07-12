@@ -1,4 +1,4 @@
-<div class=" bg-[--main-color] w-full p-10 mx-auto">
+<div class=" bg-[--main-color] w-full md:p-10 py-7 mx-auto">
   <div class="flex justify-evenly items-center flex-col sm:flex-row w-full mb-5">
     <div class=" w-[70%] sm:w-[31.25rem] rounded-full bg-[--second-color]">
       <svg  viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,56 +17,40 @@
     pt-3
     pl-3
     ">
-      Islam Mohammed <br> Front-End developer <br> &lt; Angular &gt;
+      Islam Mohammed <br> Front-End developer <br> &lt; Angular &gt;<br>
+
+      <button
+         class="sm:mt-8 mt-6 btn-text" color="accent"
+         mat-flat-button
+         (click)="downloadFile()"
+         >
+         <mat-icon>download</mat-icon>
+         download CV</button>
     </p>
-  </div>
-
-  <div class="sm:flex w-full justify-end h-[9.375rem] mb-8 hidden">
-
-    <button
-     class="ml-4 mat-elevation-z4 flex justify-center items-center w-[9.375rem]  rounded-full bg-[--red-color]" >
-      <a
-      class="h-full w-full flex justify-center items-center text-[225%]
-      leading-10
-
-      text-[--second-color]"
-      href="#EduAndSkills"
-       rel="noopener noreferrer">Edu and Skills</a>
-
-    </button>
-    <button
-     class="ml-4 mat-elevation-z4 flex justify-center items-center w-[9.375rem]  rounded-full bg-[--red-color]" >
-      <a
-      class="h-full w-full flex justify-center items-center text-[225%]
-      leading-10
-      text-[--second-color]"
-      href="#Projects"  rel="noopener noreferrer">Projects</a>
-
-    </button>
-    <button
-     class="ml-4 mat-elevation-z4 flex justify-center items-center w-[9.375rem]  rounded-full bg-[--red-color]" >
-      <a
-      class="h-full w-full flex justify-center items-center text-[225%]
-      leading-10
-      text-[--second-color]"
-      href="#SocialMedia"  rel="noopener noreferrer">Social Media</a>
-
-    </button>
-    <button
-     class=" ml-4 mat-elevation-z4 flex justify-center items-center w-[9.375rem]  rounded-full bg-[--red-color]" >
-      <a
-      class=" h-full w-full flex justify-center items-center text-[225%]
-      leading-10
-      text-[--second-color]"
-      href="#ContactMe"  rel="noopener noreferrer">Contact Me</a>
-
-    </button>
-
-
 
   </div>
 
+  <div class="sm:flex w-full justify-end h-[9.375rem] mb-8 hidden"
+
+  >
+
+    <button
+
+    *ngFor="let header of headers"
+     class="btn-head ml-4 mat-elevation-z4 flex justify-center items-center
+     w-[9.375rem]  rounded-full bg-[--red-color]"
 
 
+     >
+      <a
+      class="h-full w-full flex justify-center items-center text-[225%]
+      leading-10
+
+      text-[--second-color]"
+      href="{{header.id}}"
+       rel="noopener noreferrer">{{header.title}}</a>
+
+    </button>
+  </div>
 </div>
 <app-line></app-line>

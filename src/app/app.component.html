@@ -1,9 +1,16 @@
-<div class="container mx-auto 2xl:max-w-[1280px] ">
-  <app-home ></app-home>
+<app-header [showHeader]="showHeader"></app-header>
+
+
+<div class="pt-[70px] sm:pt-0 container mx-auto 2xl:max-w-[1280px] overflow-hidden">
+
+  <app-home id="home" (scroll)="onSectionScroll($event)"></app-home>
   <app-edu-and-skills id="EduAndSkills" ></app-edu-and-skills>
   <app-projects id="Projects"></app-projects>
+  <app-social-media id="SocialMedia"></app-social-media>
+  <app-contact-me id="ContactMe"></app-contact-me>
+  <app-scroll-up-button></app-scroll-up-button>
 
-  <router-outlet></router-outlet>
+
 </div>
 
 

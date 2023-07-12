@@ -1,0 +1,41 @@
+mat-toolbar {
+  position:fixed;
+  z-index: 100;
+  margin: auto;
+  background-color: var(--second-color);
+  border-radius: 0 0 4px 4px;
+
+
+}
+
+a {
+  color: var(--red-color);
+  text-decoration: none;
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+
+
+
+@media (max-width:640px) {
+  mat-toolbar {
+    flex-direction: column;
+    padding-bottom: 1.25rem !important;
+    /* position: relative; */
+    height: 5.625rem !important;
+  }
+
+  .hidden {
+    opacity: .97;
+    display: flex !important;
+
+  }
+
+
+
+
+}

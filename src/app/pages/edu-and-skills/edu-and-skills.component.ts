@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./edu-and-skills.component.css']
 })
 export class EduAndSkillsComponent {
+  coreCourses:string[]=['C/C++','Data Structures', 'Algorithms','Etreprenurship'];
+  advancedCourses: string[] = ['Angular','Java Script', 'Type Script',
+  'RxJs',
+  'BootStrap',
+  'Tailwind',
+  'HTML',
+  'CSS',
+  'SASS'
+
+
+];
+
+
 
 }
