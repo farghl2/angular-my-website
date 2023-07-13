@@ -1,0 +1,33 @@
+<h4 mat-dialog-title class="text-center">{{project.title}}</h4>
+
+<mat-dialog-content>
+  <div class="w-full h-full mx-auto flex flex-col justify-center items-center">
+  <div
+  [ngClass]="{'sm:flex-col sm:items-center': wFull , 'sm:flex-row': wFull}"
+
+  class="block-img w-full flex sm:items-start items-center justify-between ">
+
+  <div class="w-[20rem] sm:ml-1" *ngFor="let image of project.images" >
+    <img class="sm:w-full w-[90%] mx-auto " [src]="image" alt="{{project.title}}" (click)="onFullWidth()">
+  </div>
+  </div>
+
+  <div class="w-[80%] text-center mx-auto my-3 sm:text-[1.5rem] sm:leading-8">{{project.description}}</div>
+  <mat-chip-listbox>
+    <mat-chip *ngFor="let tech of project.technologies">{{tech}}</mat-chip>
+  </mat-chip-listbox>
+
+  <mat-chip class="my-6 res" *ngIf="project.responsive">Responsive design</mat-chip>
+
+  <div class="my-8 w-full flex justify-start gap-2">
+    <a href="{{project.gitHub}}" target="_blank" mat-button>github<mat-icon>open_in_new</mat-icon></a>
+    <a href="{{project.demo}}" target="_blank" mat-button>Demo<mat-icon>open_in_new</mat-icon></a>
+
+  </div>
+  </div>
+</mat-dialog-content>
+
+
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>OK</button>
+</mat-dialog-actions>

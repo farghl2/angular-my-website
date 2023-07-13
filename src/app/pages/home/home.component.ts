@@ -15,7 +15,7 @@ export class HomeComponent {
   constructor(private http:HttpClient){}
 
   downloadFile() {
-    const fileName = 'islam.pdf'; // Replace with the name of the file in the assets folder
+    const fileName = 'IslamFarghlResume.pdf'; // Replace with the name of the file in the assets folder
     // const fileName = 'smartsuq.png'; // Replace with the name of the file in the assets folder
 
     this.http.get(`assets/${fileName}`, { responseType:'blob' }).subscribe((response: Blob) => {

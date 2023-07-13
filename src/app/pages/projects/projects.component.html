@@ -1,18 +1,10 @@
 <div class=" bg-[--main-color] w-full md:p-10 py-7 mx-auto text-center">
   <app-head-button>Projects</app-head-button>
-  <mat-grid-list rowHeight="25rem" [cols]="gridCols" gutterSize="8">
-    <mat-grid-tile>
-      <app-card></app-card>
+  <mat-grid-list rowHeight="15rem" [cols]="gridCols" gutterSize="8">
+    <mat-grid-tile *ngFor="let project of projects">
+      <app-card [project]="project"></app-card>
     </mat-grid-tile>
-    <mat-grid-tile>
-      <app-card></app-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <app-card></app-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <app-card></app-card>
-    </mat-grid-tile>
+
 
 
   </mat-grid-list>

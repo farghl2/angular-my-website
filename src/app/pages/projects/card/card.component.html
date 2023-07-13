@@ -1,13 +1,21 @@
-<mat-card class="w-[15rem] sm:w-[20rem] custom-card p-2 mx-2">
-  <a href="https://www.smartsuq.com" target="_blank">
+<mat-card
+*ngIf="project"
 
-  <div class="w-full mb-9">
-    <img class="w-[96%] h-[15.625rem]"  src="assets/smartsuq.png" alt="">
+class="w-[15rem] sm:w-[20rem] custom-card p-2 mx-2 cursor-pointer rounded-[4px]
+
+
+" (click)="moreInfo(project)">
+  <!-- <a href="https://www.smartsuq.com" target="_blank"> -->
+
+  <div class="w-full mb-8 mx-auto" >
+    <img class="w-[96%] sm:w-full"  [src]="project.images[0]" alt="{{project.title}}">
   </div>
   <mat-card-content class="text-[1.5rem] leading-8">
-    smartsuq is an Ecommerce
+    {{project.title}} <span class="text-[1.1rem] leading-[.1rem] border-b-2 text-gray-600">more info..</span>
 
   </mat-card-content>
-  </a>
+  <!-- </a> -->
 
 </mat-card>
+
+<!-- <app-dialog-content></app-dialog-content> -->

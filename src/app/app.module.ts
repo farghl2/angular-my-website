@@ -18,6 +18,7 @@ import { ContactMeComponent } from './pages/contact-me/contact-me.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ScrollUpButtonComponent } from './shared/scroll-up-button/scroll-up-button.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { DialogContentComponent } from './pages/projects/card/dialog-content/dialog-content.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { HeaderComponent } from './shared/header/header.component';
     SocialMediaComponent,
     ContactMeComponent,
     ScrollUpButtonComponent,
-    HeaderComponent
+    HeaderComponent,
+    DialogContentComponent
 
 
 
